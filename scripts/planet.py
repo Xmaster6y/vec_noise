@@ -10,7 +10,6 @@ pinching distortion near the poles due to the texture wrapping.
 requires pyglet 1.1+ and ctypes
 """
 
-import os
 import math
 import pyglet
 from pyglet.gl import *
@@ -50,7 +49,6 @@ def create_bands_texture(bands=14.0, stretch=2.0, turbulence=8.0,
 
 
 if __name__ == '__main__':
-	import sys
 	global xrot, yrot, d
 	win = pyglet.window.Window(width=640, height=640, resizable=True, visible=False,
 		config=pyglet.gl.Config(sample_buffers=1, samples=4, double_buffer=True, depth_size=24))

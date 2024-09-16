@@ -4,13 +4,10 @@
 requires pyglet 1.1+ and ctypes
 """
 
-import os
-import math
 import pyglet
 from pyglet.gl import *
 import ctypes
-import vec_noise
-from vec_noise import pnoise3, snoise3
+from vec_noise import snoise3
 
 def create_3d_texture(width, scale):
 	"""Create a grayscale 3d texture map with the specified 
@@ -40,7 +37,6 @@ def create_3d_texture(width, scale):
 	
 
 if __name__ == '__main__':
-	import sys
 	global xrot, yrot, d
 	win = pyglet.window.Window(width=320, height=320, resizable=True, visible=False,
 		config=pyglet.gl.Config(sample_buffers=1, samples=4, double_buffer=True, depth_size=24))

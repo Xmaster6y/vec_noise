@@ -7,11 +7,10 @@ requires pyglet 1.1+ and ctypes
 """
 
 import os
-import math
 import pyglet
 from pyglet.gl import *
 import ctypes
-from vec_noise.shader_noise import ShaderNoiseTexture, shader_noise_glsl
+from shader_noise import ShaderNoiseTexture, shader_noise_glsl
 from vec_noise import shader
 
 vert_shader = shader.VertexShader('vertex', '''
@@ -67,7 +66,6 @@ atmosphere_prog.uset1F('scale', 0.3)
 
 
 if __name__ == '__main__':
-	import sys
 	global xrot, yrot, d
 	win = pyglet.window.Window(width=640, height=640, resizable=True, visible=False,
 		config=pyglet.gl.Config(sample_buffers=1, samples=4, double_buffer=True, depth_size=24))
