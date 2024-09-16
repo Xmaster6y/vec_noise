@@ -1,0 +1,18 @@
+[project]
+name = "vec_noise"
+version = "2.0.0"
+description = "Vectorized Perlin noise for Python"
+readme = "README.rst"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=2.0.2",
+]
+
+[project.optional-dependencies]
+scripts = [
+    "pyglet>=2.0.17",
+]
+
+[build-system]
+requires = ["setuptools", "numpy"]
+build-backend = "setuptools.build_meta"
